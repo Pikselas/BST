@@ -1,6 +1,7 @@
 #include"BST.h"
 //static insret does the insertion
-void BST::insert(std::shared_ptr<BST::node>& RootNode,const int data)
+template<typename data_type>
+void BST<data_type>::insert(std::shared_ptr<BST::node>& RootNode,const data_type data)
 {
   if(RootNode == nullptr)
   {
@@ -16,8 +17,9 @@ void BST::insert(std::shared_ptr<BST::node>& RootNode,const int data)
     insert(RootNode->leftNode,data);
   }
 }
-//instance's append function 
-void BST::append(int data)
+//inserts new item to the tree
+template<typename data_type>
+void BST<data_type>::append(const data_type data)
 {
   insert(root,data);
 }
