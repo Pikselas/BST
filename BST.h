@@ -4,7 +4,7 @@
 template<typename data_type>
 class BST
 {
-  public:
+     private:
        struct node
        {
           std::shared_ptr<node> leftNode = nullptr;
@@ -16,7 +16,10 @@ class BST
     BST() = default;
     ~BST() = default;
   private:
-    static void insert(std::shared_ptr<BST::node>& RootNode,const data_type data);
+    static void insert(std::shared_ptr<BST::node>& RootNode,const data_type& data);
+    static bool search(const std::shared_ptr<BST::node>& RootNode,const data_type& data);
   public:
-    void append(const data_type data);
+    std::shared_ptr<BST::node>& getRoot();
+    void append(const data_type& data);
+    bool find(const data_type& data);
 };
