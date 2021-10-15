@@ -1,4 +1,4 @@
-#include"BST.h"
+#include"BST.hpp"
 //static insert does the insertion
 template<typename data_type>
 void BST<data_type>::insert(std::shared_ptr<BST::node>& RootNode,const data_type& data)

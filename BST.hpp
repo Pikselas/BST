@@ -18,8 +18,9 @@ class BST
   private:
     static void insert(std::shared_ptr<BST::node>& RootNode,const data_type& data);
     static bool search(const std::shared_ptr<BST::node>& RootNode,const data_type& data);
-  public:
+  private:
     std::shared_ptr<BST::node>& getRoot();
+  public:
     void append(const data_type& data);
     bool find(const data_type& data);
 };
